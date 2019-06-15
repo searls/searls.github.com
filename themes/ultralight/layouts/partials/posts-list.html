@@ -1,0 +1,9 @@
+<ul>
+  {{ range .Pages.ByPublishDate.Reverse }}
+  <li>
+    {{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+

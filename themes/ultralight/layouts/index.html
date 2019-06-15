@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <article>
+    <section>
+      {{- .Content -}}
+    </section>
+    <section>
+      {{ with .Site.GetPage "/posts" }}
+        {{- partial "posts-list.html" . -}}
+      {{ end }}
+    </section>
+  </article>
+{{ end }}
+
