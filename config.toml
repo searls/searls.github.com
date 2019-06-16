@@ -1,4 +1,6 @@
 baseURL = "https://searls.github.io"
 languageCode = "en-us"
 title = "searls"
-theme = ["ultralight"]
+theme = "ultralight"
+pygmentsCodeFences = true
+

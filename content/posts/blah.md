@@ -15,6 +15,11 @@ with the release of Letraset sheets containing Lorem Ipsum passages, and more
 recently with desktop publishing software like Aldus PageMaker including
 versions of Lorem Ipsum.
 
+> Here is a famous quote
+> It covers two lines
+
+Neat.
+
 ### Why do we use it?
 
 It is a long established fact that a reader will be distracted by the readable
@@ -31,14 +36,13 @@ what about this you ask? I dunno.
 
 here is some codes:
 
-{{< highlight ruby >}}
-def foo(a, b)
+```ruby
+def bar(a, b)
   a + b
 end
-{{< /highlight >}}
+```
 
-
-### Where does it come from?
+## Where does it come from?
 
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
 in a piece of classical Latin literature from 45 BC, making it over 2000 years
@@ -51,7 +55,25 @@ Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
 ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
 "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
+# I am a bad h1
+
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
 those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
 Malorum" by Cicero are also reproduced in their exact original form, accompanied
 by English versions from the 1914 translation by H. Rackham.
+
+#### h4
+
+##### h5
+
+* bullet 1
+* bulet 2
+
+###### h6
+
+1. ordered 1
+  * bullet 1
+  * bullet 2
+2. ordered 2
+  1. deep 1
+  2. deep 2

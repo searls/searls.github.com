@@ -1,0 +1,25 @@
+html, body
+  margin: 0
+  width: 100%
+
+#wrap
+  display: flex
+  justify-content: center
+
+#main
+  max-width: 83.2ex // <-- ~80 chars
+
+  > article
+    margin: 0 70px
+    padding: 46px 0
+
+  @media (min-width: $page-width)
+    margin: 23px 70px
+
+blockquote
+  border-left: 3px solid var(--blockquote-accent)
+  margin-left: 2px
+  margin-right: 6px
+  padding-left: 16px
+
+
