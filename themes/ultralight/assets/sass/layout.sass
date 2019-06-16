@@ -1,3 +1,12 @@
+*:root
+  --content-margin: 6vw
+
+
+@media (min-width: $wider-display)
+  *:root
+    --content-margin: 70px
+
+
 html, body
   margin: 0
   width: 100%
@@ -10,14 +19,12 @@ html, body
   max-width: 83.2ex // <-- ~80 chars
 
   > article
-    margin: 0 6vw
+    margin: 0 var(--content-margin)
     padding: 46px 0
 
-    @media (min-width: $wider-display)
-      margin: 0 70px
-
   @media (min-width: $page-width)
-    margin: 23px 70px
+    margin-top: 23px
+    margin-bottom: 23px
 
 blockquote
   border-left: 3px solid var(--blockquote-accent)
@@ -28,3 +35,10 @@ blockquote
 pre
   padding: 6px 8px
 
+img
+  margin: 0.5em auto
+  width: calc(100% + 2 * var(--content-margin))
+  margin-inline-start: calc(-1 * var(--content-margin))
+
+  display: block
+  height: auto
