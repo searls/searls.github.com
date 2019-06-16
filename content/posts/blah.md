@@ -29,7 +29,7 @@ accident, sometimes on purpose (injected humour and the like).
 what about this you ask? I dunno.
 
 
-here is some codes
+here is some codes:
 
 {{< highlight ruby >}}
 def foo(a, b)
