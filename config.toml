@@ -1,7 +1,11 @@
-baseURL = "https://searls.github.io"
+baseURL = "https://justin.searls.co"
 languageCode = "en-us"
 title = "searls"
 theme = "ultralight"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 
+[params]
+  TwitterName = "searls"
+  GithubName = "searls"
+  Email = "justin@searls.co"

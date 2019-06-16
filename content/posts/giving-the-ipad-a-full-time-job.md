@@ -4,7 +4,6 @@ description: ''
 date: '2017-06-25T20:49:27.180Z'
 categories: []
 keywords: []
-slug: /@searls/giving-the-ipad-a-full-time-job-3ae2440e1810
 ---
 
 _\[A translation of this post is available_ [_in Chinese_](https://medium.com/rocketcafe001/ipad-full-time-job-4e4f0523ee08)_\]_
@@ -22,7 +21,7 @@ I’ve owned all-but-one model iPhone, but I’m not doing much to celebrate our
 
 For a while, I assumed working on a desktop computer would continue to provide refuge from this era of distraction, but then Apple went and brought all the fun [Back to the Mac](https://www.engadget.com/2010/10/20/live-from-apples-back-to-the-mac-event/). And while it’s possible to opt-out of a lot of the things that make the Mac less productive, I can’t deny that the root problem is that my experience carrying an iPhone everywhere I go has changed _me_ in profound ways.
 
-Here’s a depressing example. Desktop operating systems’ windowing features used to represent a net productivity boost — I could see two things at once, drag between them, and get more done in less time. But this stopped being the case at some point in the post-iPhone age. Here’s why: the mere _absence_ of any windows in the corner of my screen will prompt my brain to think _if I type_ `_⌘-Space "tw"_`_, I could have Tweetbot fill that void on the left side of my desktop / soul_. And every time, as if I’d entered some kind of fugue state, 30 minutes will have elapsed with me getting absolutely nothing done, leaving a mess of browser tabs open, and with an elevated heart-rate on account of feeling antagonized by an unkind rando on Twitter.
+Here’s a depressing example. Desktop operating systems’ windowing features used to represent a net productivity boost — I could see two things at once, drag between them, and get more done in less time. But this stopped being the case at some point in the post-iPhone age. Here’s why: the mere _absence_ of any windows in the corner of my screen will prompt my brain to think _if I type_ `⌘-Space "tw"`_, I could have Tweetbot fill that void on the left side of my desktop / soul_. And every time, as if I’d entered some kind of fugue state, 30 minutes will have elapsed with me getting absolutely nothing done, leaving a mess of browser tabs open, and with an elevated heart-rate on account of feeling antagonized by an unkind rando on Twitter.
 
 ![2007 Justin would see an editor and a browser, but 2017 Justin can only see unutilized space that could be occupied by Twitter, Mail, or Slack](https://cdn-images-1.medium.com/max/800/1*F3ZUuqSgp4YQOTzgQUJDXQ@2x.png)
 2007 Justin would see an editor and a browser, but 2017 Justin can only see unutilized space that could be occupied by Twitter, Mail, or Slack

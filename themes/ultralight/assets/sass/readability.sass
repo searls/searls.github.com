@@ -5,6 +5,28 @@ body
   word-wrap: break-word
   --webkit-font-smoothing: subpixel-antialiased
 
+a
+  color: var(--bright-accent)
+  text-decoration: none
+  font-weight: 400
+
+  &:hover
+    text-decoration: underline
+    text-decoration-style: dotted
+
+
+header
+  a
+    +cutout
+
+nav
+  a
+    color: var(--cutout-shadow)
+
+    &:hover
+      color: var(--cutout-shadow-hover)
+      text-decoration: none
+
 #main
   font-size: 18px
   line-height: 29px
