@@ -3,28 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://justin.searls.co/posts/blah/</loc>
-    <lastmod>2019-06-15T21:36:38-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://justin.searls.co/posts/</loc>
-    <lastmod>2019-06-15T21:36:38-04:00</lastmod>
+    <lastmod>2018-05-30T04:12:37+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://justin.searls.co/</loc>
-    <lastmod>2019-06-15T21:36:38-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://justin.searls.co/posts/gaming-with-a-mac-plus-egpu/</loc>
-    <lastmod>2019-06-15T15:54:53-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://justin.searls.co/posts/searls/you-make-less-money-than-you-used-to-blame-your-iphone-61ae5831c93f/</loc>
+    <lastmod>2018-05-30T04:12:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://justin.searls.co/</loc>
     <lastmod>2018-05-30T04:12:37+00:00</lastmod>
   </url>
   
