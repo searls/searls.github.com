@@ -5,16 +5,6 @@ body
   word-wrap: break-word
   --webkit-font-smoothing: subpixel-antialiased
 
-a
-  color: var(--bright-accent)
-  text-decoration: none
-  font-weight: 400
-
-  &:hover
-    text-decoration: underline
-    text-decoration-style: dotted
-
-
 header
   a
     +cutout
@@ -22,6 +12,7 @@ header
 nav
   a
     color: var(--cutout-shadow)
+    text-decoration: none
 
     &:hover
       color: var(--cutout-shadow-hover)
@@ -57,4 +48,14 @@ nav
   h4, h5, h6
     font-size: 1em
     margin: 1em 0
+
+  a
+    color: var(--accent-bright)
+    text-decoration: none
+    font-weight: 400
+
+    &:hover
+      text-decoration: underline
+      text-decoration-style: dotted
+
 
