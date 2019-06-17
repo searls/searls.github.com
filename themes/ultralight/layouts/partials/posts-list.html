@@ -1,9 +1,13 @@
-<ul>
+<div class="posts-list">
   {{ range .Pages.ByPublishDate.Reverse }}
-  <li>
-    {{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-  </li>
+  <div class="post">
+    <div class="title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    <time datetime="{{ .Date.Format "2006-01-02"}}">
+      {{ .Date.Format "2006.01.02" }}
+    </time>
+    <hr>
+  </div>
   {{ end }}
-</ul>
-
+</div>

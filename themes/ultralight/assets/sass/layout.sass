@@ -34,7 +34,7 @@ header, footer
   @media (min-width: $page-width)
     box-shadow: 0px 6px 12px 3px var(--shadow-color)
 
-  > article
+  > :first-child
     margin: 0 var(--content-margin)
     padding: 46px 0
 
@@ -67,8 +67,10 @@ header, footer
 
   .aftermath
     text-align: center
-    font-weight: 100
-    opacity: .3
+
+time
+  font-weight: 100
+  opacity: .3
 
 nav
   display: inline-block
@@ -85,3 +87,24 @@ nav
 
       &:not(:first-child)
         margin-left: 14px
+
+.posts-list
+  .post
+    margin-top: 44px
+
+    &:last-of-type
+      hr
+        display: none
+
+  .title
+    width: 90%
+    margin: 0 auto
+    font-size: 1.25em
+    font-weight: semibold
+
+  time
+    margin-top: 32px
+    display: block
+    text-align: center
+
+
