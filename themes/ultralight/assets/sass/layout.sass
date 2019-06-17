@@ -62,8 +62,13 @@ header, footer
 
   hr
     border: 0;
-    border-bottom: 1px dashed var(--accent);
-    background: var(--accent-light);
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--accent), rgba(0, 0, 0, 0));
+
+  .aftermath
+    text-align: center
+    font-weight: 100
+    opacity: .3
 
 nav
   display: inline-block
