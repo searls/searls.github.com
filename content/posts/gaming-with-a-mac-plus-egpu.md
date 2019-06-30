@@ -1,7 +1,6 @@
 ---
 title: Cramming a gaming GPU into your MacBook Pro
-date: 2019-06-15T19:54:53.000+00:00
-draft: true
+date: 2019-06-30T19:54:53+00:00
 
 ---
 ## …without actually doing that
