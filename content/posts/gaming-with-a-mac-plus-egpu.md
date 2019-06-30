@@ -242,10 +242,24 @@ First, hit the Windows key and type "power" to bring up the basic power preferen
 
 All I changed here was to set "When plugged in, PC goes to sleep after" to "Never", which doesn't form a real sentence, but will solve the primary problem of eGPUs freaking out during Windows sleep. Note that it is safe to allow sleep when on battery power, because since all eGPU enclosures supply power to the system over the Thunderbolt 3 cable, you're never _not_ plugged in when they're connected.
 
-Next, click additional power settings:
-
-Dig through the control panel for this energy settings page:
+Next, click additional power settings and stumble around until you find this energy settings page:
 
 ![Windows 10 energy settings](/uploads/e1.jpg)
 
-You'll see I disabled sleep when pressing the power button or closing the lid, as well as removing all sleep-related options from the start menu.
+Of these, the most important is that you be able to close the lid without triggering Windows sleep when you're plugged in. But you can see I also disabled sleep when pressing the power button, as well as removing all sleep-related options from the start menu.
+
+### Run some benchmarks
+
+From here, you can start installing and trying out some games. To verify everything is working as you expect, it might make sense to run a benchmark. A free one you might try is the [Unigine "superposition" benchmark](http://benchmark.unigine.com/superposition), which should be able to stress any GPU currently on the market.
+
+If you're not familiar, benchmarks are basically complex 3D rendered game-like environments that are scripted as opposed to being interactive.
+
+ Because I was connected to a 4K monitor, I ran the benchmark at "4K optimized" and this setup yielded a score of 7037:
+
+![benchmark results](/uploads/IMG_0249.jpg)
+
+Running the 2 or 3 minute demo is enough time to heat up the GPU and see how it performs under load. The Razer Core V2 really doesn't hide any noise at all, so in addition to running fairly hot, it was definitely pretty loud: between 53-56dB from a meter away. Because I'm used to modern GPUs being six feet away under a TV and in a massive noise-dampening case, the screeches and whines that result when the GPU is being put to work terrify me that something is wrong, but I have zero actual indication that anything is.
+
+### Install rEFInd
+
+Only proceed with this section of installing rEFInd
