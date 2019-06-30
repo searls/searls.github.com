@@ -33,4 +33,12 @@ First, everything here, I pieced together from dozens of forum posts, guides, an
 * macOS 10.14.5 (18F132)
 * Windows 10 version 1903 (18362.175)
 
-Why an AMD card over Nvidia? Well, if I was only ever going to plug macOS ships with drivers to most AMD cards, but Nvidia card support is a tremendous pain, and zero drivers are available for their new [RTX](https://www.nvidia.com/en-us/geforce/20-series/) line)
+### Initial questions you might have
+
+**Why an AMD card over Nvidia?** If you plan on ever plugging the eGPU into macOS (as opposed to Windows), you're going to have a much easier time of it with an AMD card. macOS ships with drivers to most AMD cards, but Nvidia card support is a [tremendous pain](https://egpu.io/forums/mac-setup/wip-nvidia-egpu-support-for-high-sierra/) that's only getting worse with time, as zero Mac drivers are available for their new [RTX](https://www.nvidia.com/en-us/geforce/20-series/) line).
+
+**Why a Razer Core V2?** I chose this model because it's lightweight (at a "mere" 11 pounds), properly isolates bandwidth (5gbps) for its 4 USB ports, and is relatively small size (7.5 liter). It can't buffer much heat or noise, though. In truth, there are actually quite a few [decent options out there](https://egpu.io/external-gpu-buyers-guide-2019/), and most will have the same Thunderbolt 3 controller chip doing the heavy lifting.
+
+**Why an external monitor?** While both macOS and Windows can "loopback" frames rendered by the eGPU over the cable and onto the computer's built-in monitor, support for this is very recent and it introduces a nonzero bandwidth cost which can result in lower framerates as well as frames being dropped. Adding to that, the relatively high DPI of Apple's displays makes running games at native resolutions more demanding than monitors designed for PC gaming.
+
+**What about my pre-2019 MacBook Pro?** If it has Thunderbolt 3 ports (e.g. [late-2016](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.0-13-late-2016-retina-display-no-touch-bar-specs.html) or later), you'll be able to figure out a way to make it work, but with an increased amount of futzing for each year you go back. I initially set all this up with a [mid-2017](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2017-retina-display-no-touch-bar-specs.html) MacBook Pro, but wound up spending six or seven hours futzing with various salves and incantations to work around "[Windows Error 12](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/)", which is the nonsense Device Manager will spew when Windows can't figure out how to get sufficient bandwidth and memory addressed to use the eGPU.
