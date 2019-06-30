@@ -6,10 +6,19 @@
     <description>Recent content in Posts on searls</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 May 2018 04:12:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2019 00:54:53 +0000</lastBuildDate>
     
 	<atom:link href="https://justin.searls.co/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cramming a gaming GPU into your MacBook Pro</title>
+      <link>https://justin.searls.co/posts/gaming-with-a-mac-plus-egpu/</link>
+      <pubDate>Sun, 30 Jun 2019 00:54:53 +0000</pubDate>
+      
+      <guid>https://justin.searls.co/posts/gaming-with-a-mac-plus-egpu/</guid>
+      <description>…without actually doing that How we got here After Apple released its (soon-to-be) previous generation Mac Pro, it probably didn&#39;t take long for them to realize they had a trash can fire on their hands, especially with regards to GPU performance. When Apple announced eGPU support for macOS in 2017&#39;s High Sierra release, it was hard not to see the announcement as anything more than an admission that Apple&#39;s top-of-the-line desktops and notebooks shipped with subpar GPUs due to their severe thermal constraints.</description>
+    </item>
     
     <item>
       <title>You make less money than you used to. Blame your iPhone.</title>
@@ -137,7 +146,7 @@ Travel Light I travel with a carry-onable back pack. Anything larger would be ob
       <pubDate>Sat, 08 Aug 2015 21:36:17 +0000</pubDate>
       
       <guid>https://justin.searls.co/posts/searls/installing-a-content-blocker-on-ios-9-public-beta-a25b2b83848f/</guid>
-      <description>After spending 3 weeks abroad, literally afraid of opening anything resembling an article in Safari, I was eager to come home, install a beta operating system, and take advantage of iOS 9&amp;rsquo;s now-famous content blocking API. There are a few projects on GitHub that do this, but the most evolved seems to be Block Party.
+      <description>After spending 3 weeks abroad, literally afraid of opening anything resembling an article in Safari, I was eager to come home, install a beta operating system, and take advantage of iOS 9&#39;s now-famous content blocking API. There are a few projects on GitHub that do this, but the most evolved seems to be Block Party.
 Let’s try out installing a content blocker on an iPhone for ourselves. The instructions below are mostly complete and a bit inane, so it’s up to you whether you’re better off just waiting the 4–6 weeks until iOS 9 is released to the public.</description>
     </item>
     
@@ -178,7 +187,7 @@ Up until last night I thought I was just out of luck unless I installed flux, wh
       
       <guid>https://justin.searls.co/posts/searls/studying-japanese-with-a-nintendo-3ds-google-translate-b5c6d3206562/</guid>
       <description>I was interested in using videogames to practice my Japanese reading and listening comprehension, so after some initial thinking, I decided to buy an imported New Nintendo 3DS. Here are some notes on how I went about that and what I’m doing to use games primarily as an educational tool.
-Buying the device There are lots of import sites out there that will get you a good deal on Japanese game products, but I wanted to (a) get fast, reliable shipping, (b) have some kind of return policy, and &amp;copy; not risk customs headaches.</description>
+Buying the device There are lots of import sites out there that will get you a good deal on Japanese game products, but I wanted to (a) get fast, reliable shipping, (b) have some kind of return policy, and (c) not risk customs headaches.</description>
     </item>
     
     <item>
