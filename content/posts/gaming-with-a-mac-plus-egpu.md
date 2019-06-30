@@ -101,6 +101,8 @@ And that's pretty much all there is to using an eGPU with macOS. The entire expe
 
 ### Setting up Windows via Boot Camp
 
+**Before you do anything else, disconnect your eGPU.** When it's safe to plug it in under Windows, I'll let you know!
+
 This process hasn't changed much in the last 12 years. Start by [downloading Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
 
 As of mid-June 2019, the most recent downloadable version of the Windows 10 installer was the October 2018 release:
@@ -127,7 +129,7 @@ The next thing to look out for is that once Windows boots, an Apple-deployed scr
 
 ![the Windows Boot Camp Support installer](/uploads/Image 3.jpeg)
 
-Because each Windows release is dramatically improving its own eGPU support, before doing anything else you'll want to upgrade to the latest available stable release. For reference, I started at Windows 10 version 1809. 
+Because each Windows release is dramatically improving its own eGPU support, before doing anything else you'll want to upgrade to the latest available stable release. For reference, I started at Windows 10 version 1809.
 
 The most recent release at the time was 1903, but Windows 10 is especially precious about how it rolls out system updates over its install base, and actually does not expose a mechanism in the operating system to tell it "shut up, just give me the latest release". You can force-trigger a release by visiting a particular [Microsoft web page](https://microsoft.com/en-us/software-download/windows10?) and clicking "Update now", however:
 
@@ -154,3 +156,35 @@ Click OK, and in the previous pane, you should now be able to click "Create" a r
 You'll be asked to name the restore point, and you can give it whatever name you want:
 
 ![Create a restore point dialog, named 1-initial-setup](/uploads/3f.jpg)
+
+Next, because Windows 10's built-in attempt to locate and install GPU drivers will often interfere with the chipmakers' own software, prior to plugging in your eGPU or installing any AMD or Nvidia drivers, you actually want to _uninstall_ all GPU drivers and prevent Windows Update from attempting to install new ones. This can be done with a program called DDU which can be [downloaded here]() (I used [version 18.0.1.5]()). The website looks like every other website for software that runs on Windows:
+
+![the DDU home page](/uploads/8.jpg)
+
+Because the download link disappears every once few seconds on a timed carousel animation, just keep waiting until you time your click to successfully download it.
+
+Once installed, run it and it'll complain that you're not in Windows Safe mode:
+
+![DDU launcher](/uploads/7.jpg)
+
+At the time of this writing and with this mix of hardware and software, it actually didn't appear to be possible to boot Windows 10 into Safe Mode under Boot Camp, so I just launched anyway.
+
+Since I was going to install a Radeon card, I selected AMD from the dropdown box near the top-right of the UI, resulting in the app shading itself like this:
+
+![The DDU UI after selecting AMD Radeon](/uploads/5.jpg)
+
+From there, open the options and check the "Prevent downloads of drivers from 'Windows update'" box at the bottom of the page:
+
+![](/uploads/6.jpg)
+
+This will prevent Windows Update from attempting to install any GPU drivers. Windows Update doesn't normally screw up GPU drivers once things are initially set up, but because you're likely going to be connecting and disconnecting a GPU with much greater regularity than you ever would on a traditional tower, and into any of 4 Thunderbolt 3 ports, the risk is much greater when working with an eGPU.
+
+Okay, after checking "prevent downloads", close the options menu and then click "**Clean and restart**"in the top-left corner of DDU's interface. It will warn you again and you will ignore it, because you've been using Windows for two hours at this point and you've already dismissed twenty pointless warning dialogs:
+
+![](/uploads/4.jpg)
+
+When that's done, restart, hit the windows key and type "restore point" again to create a second restore point after you've run DDU but before you've downloaded your GPU's drivers:
+
+![](/uploads/3b.jpg)
+
+Next up, you can finally plug in your 
