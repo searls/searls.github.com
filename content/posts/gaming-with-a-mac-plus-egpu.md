@@ -99,7 +99,7 @@ If you fail to do this and yank the cable without first unmounting the eGPU, mac
 
 And that's pretty much all there is to using an eGPU with macOS. The entire experience is so invisible and seamless that Apple's engineers deserve to be commended.
 
-### Setting up Windows via Boot Camp
+### Installing Windows via Boot Camp
 
 **Before you do anything else, disconnect your eGPU.** When it's safe to plug it in under Windows, I'll let you know!
 
@@ -140,6 +140,8 @@ Weird.
 Anyway, that'll take entirely too long to download, so go make a sandwich, I guess. I was too afraid of continuing with any configuration when those options were likely to have been affected by the latest release. So just wait for this to finish:
 
 ![windows 10 update app](/uploads/2.jpg)
+
+### Enabling Windows system protection
 
 Once Windows has updated itself and restarted, we want to create a System Restore Point, so that we can easily unwind any driver & configuration changes we make if we run into trouble. You can do this by hitting the windows key and searching "restore point" to open this dialog:
 
@@ -206,4 +208,20 @@ The installation process for both is dead simple and fully automated. Either wil
 
 > **Why not restart with the eGPU connected?** The hand-wavy short version is that when Windows boots normally on a Mac with an eGPU connected, the device is initialized in such a way by the EFI boot loader so as to not work as expected. That means, by default, you'll probably need to plug in your eGPU on Windows only after each boot. (There is a way around this, but it's not pretty; I'll explain below when I talk about rEFInd.
 
-Okay, so after you've
+Anyway, so after you've booted up again and re-plugged in your eGPU, go back to Device Manager. With any luck, the GPU will now be recognized for what it is, based on the model name of the card you put in there:
+
+![Device manager with a Radeon VII on it](/uploads/a4.jpg)
+
+In my case, when I view the properties of the AMD Radeon VII display adapter, everything looks good:
+
+![](/uploads/a2.jpg)
+
+There is a really good chance, however, that you'll see a yellow exclamation point over the GPU's icon, and instead of "This device is working properly", you'll be greeted by "Error 12" and  a message that the device doesn't have sufficient resources (read: either memory addressing or bandwidth) to be used. If you see this, your GPU won't engage at all, and you'll have to troubleshoot it. There are a bunch of ideas [in this thread](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/), but what will work for you depends on a combination of factors. 
+
+Before you get too deep in the weeds trying to solve this, however, be sure to try connecting the eGPU to each of the four Thunderbolt 4 ports of your MacBook Pro, each separated by a system reboot. It may be the case that one of them works reliably (on the 13" models, the left-front port typically has the most available bandwidth for  Thunderbolt 3 PCIe devices).
+
+In any case, if and when Windows reports the device is working properly, that means you should be able to drive an external display by connecting it to one of your card's output ports. You may be able to imagine that this requires significantly less bandwidth than looping back to the built-in monitor, because all the information involved is traveling in one direction (instructions from the computer to the eGPU, rendered frames from the eGPU to the monitor.
+
+Once you've connected a second monitor, if you want to ensure no Thunderbolt 3 bandwidth is wasted on driving your MacBook's display, hit windows-P repeatedly until you select "second screen only", effectively disabling the notebook display under Windows:
+
+![The Windows display mode options](/uploads/d.jpg)
