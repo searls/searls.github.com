@@ -5,6 +5,9 @@ theme = "ultralight"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 
+[blackfriday]
+  smartypants = false
+
 [params]
   TwitterName = "searls"
   GithubName = "searls"
