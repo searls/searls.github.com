@@ -260,6 +260,80 @@ If you're not familiar, benchmarks are basically complex 3D rendered game-like e
 
 Running the 2 or 3 minute demo is enough time to heat up the GPU and see how it performs under load. The Razer Core V2 really doesn't hide any noise at all, so in addition to running fairly hot, it was definitely pretty loud: between 53-56dB from a meter away. Because I'm used to modern GPUs being six feet away under a TV and in a massive noise-dampening case, the screeches and whines that result when the GPU is being put to work terrify me that something is wrong, but I have zero actual indication that anything is.
 
-### Install rEFInd
+### Install rEFInd Boot Manager
 
-Only proceed with this section of installing rEFInd
+To work around the issue of your eGPU being initialized improperly at boot-time when booting into macOS, you can use rEFInd as your boot manager specifically to _pretend_ that you're booting macOS each time you boot Windows for the purpose of hardware initialization. If this sounds dumb, it really is.
+
+Only proceed with this section of installing [rEFInd](http://www.rodsbooks.com/refind/) if you want to be able to perform a cold boot into Windows without first disconnecting the eGPU. It's a silly amount of security compromise and complexity for such a small quality of life improvement, but if you're going to be switching between Windows and macOS frequently, if you're using a headless Mac like a Mac Mini, or if you're struggling to overcome "[Error 12](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/)", doing this might be worth it to you.
+
+rEFInd is a third party open source boot manager, and started as a fork of the defunct rEFIt project. Here's how to get it set up:
+
+First, [download the binary zip file](http://www.rodsbooks.com/refind/getting.html) linked to from the project page. Extract the directory to someplace you can find easily from the command line for the next few steps. I put mine in my home directory: `/Users/justin/refind-bin-0.11.4`.
+
+#### Disable Secure Boot
+
+If your Mac has a T2 chip, it is pre-configured to only boot Apple-approved operating systems, of which rEFInd most certainly is not. To disable this feature, reboot your Mac into Recovery mode while holding Command-R.
+
+Once in recovery mode, from the Utilities menu, open Startup Security Utility, and enter an administrator's password. It should look like this:
+
+![startup security utility](/uploads/macos-high-sierra-startup-security-utility.png)
+
+To use rEFInd, you'll need to select "No Security". Once toggled, you can quit the app.
+
+Next, from the Utility menu, launch the Terminal app. Here, you'll need to disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection) (SIP) so that you can write to the [EFI system partition](https://en.wikipedia.org/wiki/EFI_system_partition) (ESP). To do this, in Terminal, execute:
+
+    # csrutil disable
+
+Now, for this to take effect, you'll need to restart the Mac and hold command-R to reboot into Recovery Mode _yet again_.
+
+Once back in Recover Mode, you'll need to mount your main Mac partition so that you can get access to the rEFInd installer you downloaded previously. You can do this by launching Disk Utility from the Utilities menu, clicking "Macintosh HD" and clicking the mount toolbar button:
+
+![Disk Utility](/uploads/Image-2.jpeg)
+
+If FileVault is enabled, mounting the drive will require any user's password to unlock it. Quit Disk Utility and open Terminal.
+
+Now that the disk is mounted, navigate to your home directory, which in my case is:
+
+    # cd /Volumes/Macintosh\ HD/Users/justin
+
+Then, run rEFInd's install script, which I'd placed right there:
+
+    # refind-bin-0.11.4/refind-install
+
+This script will mount the EFI system partition to /Volumes/ESP, install itself, and bless itself in the Mac's [NVRAM](https://support.apple.com/en-us/HT204063) so that upon boot, rEFInd is the first thing that's executed.
+
+Before the installer exits, it will also report that it's copied a configuration file to `refind.conf`. 
+
+We need to edit this file to enable macOS hardware "spoofing" so that Windows has any chance of booting successfully while an eGPU is connected.
+
+Run this command to open vim and edit the configuration file:
+
+    # vim /Volumes/ESP/EFI/refind/refind.conf
+
+If you don't know vim, don't worry, there's not a lot to do here. Just follow exactly these keystrokes:
+
+1\. type '/spoof' and hit enter
+
+2\. position the cursor over the \`#\` character at the beginning fo the line that reads \`#spoof_osx_version 10.9\`
+
+3\. hit the \`x\` key to delete the \`#\`, effectively uncommenting it
+
+4\. type \`:wq\` and hit enter to write the file and quit vim
+
+Congratulations, now you know vim. Quit terminal, and shut down the machine.
+
+Now, each time you boot, you'll be treated to this really ugly splash page that will remind you of the year of Linux on the desktop, whichever year that was for you:
+
+![the rEFInd boot UI](/uploads/Image 2-1.jpeg)
+
+To boot Windows with macOS hardware spoofing, you'll want the first entry. Use the arrow keys and enter to launch it. For macOS, you want to select the second option. It's useful to keep in mind that rEFInd will automatically boot the previously used partition after a 20 second timeout. This is handy, because if you boot while you're in clamshell mode, you're not going to see this screen on your external display. Just wait, and eventually the machine will boot into whatever operating system you used most recently. 
+
+If you need to switch between operating systems across boots, you'll need to either hit exactly the right arrow key and enter at the right time or peek under the lid.
+
+## That's all, folks!
+
+Congratulations, you're now too tired to want to play any games with your now-capable-of-running-them MacBook Pro.
+
+But seriously, this is an exciting branch of enthusiast computer hardware. For being so niche and little known, there's clearly a ton of investment being made by multiple hardware manufacturers (with new enclosures hitting the market each quarter), by Apple and Microsoft (from whom, each point release for the last two years has made strides in eGPU support), and from Intel  (whose Thunderbolt 3 API for the eGPU spec has realized the dream of plug-and-play interoperability between hundreds of enclosure-and-GPU combinations.
+
+It'll be interesting to see where things go from here, and even if you don't have imminent plans to build your own travel-friendly PC gaming battle station, you might want to keep tabs on the [eGPU.io forums](https://egpu.io) or the [/r/eGPU subreddit](https://reddit.com/r/egpu) every now and again, because this sort of gaming configuration is getting easier all the time.
