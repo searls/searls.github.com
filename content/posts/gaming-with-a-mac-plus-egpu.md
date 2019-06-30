@@ -73,7 +73,7 @@ And finally, here's what it all looks like when thrown onto a desk with a monito
 
 ![monitor, keyboard, mouse, eGPU, and closed MacBook Pro](/uploads/IMG_4122.jpg)
 
-The eGPU ships with a hilariously short 1 foot cable, so you'll want to reach for an active 2 meter cable as soon as possible.
+The eGPU ships with a hilariously short 1-foot cable, so you'll want to reach for an active 2 meter cable as soon as possible.
 
 ### Setting up macOS
 
@@ -87,4 +87,10 @@ If you have certain apps that need an extra push to use that GPU, you can tell m
 
 ![Dialog for "Prefer External GPU"](/uploads/Screen Shot 2019-06-30 at 9.40.00 AM.png)
 
-And, while it's said that you can "hot" plug an eGPU at any time while running the computer, I think it'd be more fair to say you can merely "warm" unplug it. If you unplug the eGPU without giving macOS a chance to restart any applications currently using it, those apps will crash and macOS will yell at you. So, 
+And, while you can "hot plug" an eGPU into your machine at any time while running the computer, I think it'd be more fair to say you can merely "warm unplug" it. You're first supposed to tell macOS to force restart any apps that are currently depending on the eGPU via this menu bar option:
+
+![Menubar option to disconnect eGPU](/uploads/Screen Shot 2019-06-30 at 9.44.18 AM.png)
+
+If you fail to do this and yank the cable without first unmounting the eGPU, macOS will yell at you (before proceeding to force-restart most of the apps you were just running):
+
+![macOS warning not to unplug the eGPU without unmounting it first](/uploads/Screen Shot 2019-06-30 at 9.48.27 AM.png)
