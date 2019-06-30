@@ -175,16 +175,35 @@ Since I was going to install a Radeon card, I selected AMD from the dropdown box
 
 From there, open the options and check the "Prevent downloads of drivers from 'Windows update'" box at the bottom of the page:
 
-![](/uploads/6.jpg)
+![DDU advanced options where you'll prevent downloads from Windows Update](/uploads/6.jpg)
 
 This will prevent Windows Update from attempting to install any GPU drivers. Windows Update doesn't normally screw up GPU drivers once things are initially set up, but because you're likely going to be connecting and disconnecting a GPU with much greater regularity than you ever would on a traditional tower, and into any of 4 Thunderbolt 3 ports, the risk is much greater when working with an eGPU.
 
 Okay, after checking "prevent downloads", close the options menu and then click "**Clean and restart**"in the top-left corner of DDU's interface. It will warn you again and you will ignore it, because you've been using Windows for two hours at this point and you've already dismissed twenty pointless warning dialogs:
 
-![](/uploads/4.jpg)
+![DDU warning you will ignore](/uploads/4.jpg)
 
 When that's done, restart, hit the windows key and type "restore point" again to create a second restore point after you've run DDU but before you've downloaded your GPU's drivers:
 
-![](/uploads/3b.jpg)
+![A second restore point named 2-post-ddu](/uploads/3b.jpg)
 
-Next up, you can finally plug in your 
+**Next up, you should finally plug in your eGPU!** Give Windows a minute as the eGPU warms up to detect the Thunderbolt controller. If you open Device Manager you should see a display adapter named "Microsoft Basic Display Adapter":
+
+![Device manager](/uploads/a3.jpg)
+
+If you check the properties of that (driverless) display adapter, they'll look like this;
+
+![Display adapter properties](/uploads/a.jpg)
+
+This is great! It means Windows is connecting to your eGPU enclosure's Thunderbolt 3 controller fine, and it can tell there's a GPU plugged into it.
+
+Next, we'll want to install drivers.
+
+* **AMD:** Go to the [downloads page](https://www.amd.com/en/support) and scroll down to download the "Auto-Detect and Install Radeon Graphics Drivers for Windows" installer
+* **Nvidia:** [Download GeForce Experience](https://www.geforce.com/drivers) under "Automatic Driver Updates"
+
+The installation process for both is dead simple and fully automated. Either will prompt you to restart Windows, but **don't click Restart**. Instead, shut down the computer entirely. Once it's off, unplug the eGPU, boot it up again, login, and plug the eGPU back in.
+
+> **Why not restart with the eGPU connected?** The hand-wavy short version is that when Windows boots normally on a Mac with an eGPU connected, the device is initialized in such a way by the EFI boot loader so as to not work as expected. That means, by default, you'll probably need to plug in your eGPU on Windows only after each boot. (There is a way around this, but it's not pretty; I'll explain below when I talk about rEFInd.
+
+Okay, so after you've
