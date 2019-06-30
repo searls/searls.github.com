@@ -49,7 +49,7 @@ Ok, with that out of the way. Let's see what it looks like to set this all up.
 
 At the risk of being too verbose, I've decided to document literally every little step of the process I took in setting things up, because even minor gaps I found in other people's builds online would often mask tremendous complexities that took me hours to figure out on my own.
 
-### Mounting the GPU
+### Assembling the eGPU
 
 Start by unboxing your GPU and eGPU enclosure.
 
@@ -57,12 +57,34 @@ So, here's a Radeon VII card:
 
 ![Radeon VII card](/uploads/IMG_4111.jpg)
 
-And here's a Razer Core V2:
+And here's a Razer Core V2 eGPU enclosure:
 
-![](/uploads/IMG_4113.jpg)
+![A Razer Core V2 eGPU enclosure](/uploads/IMG_4113.jpg)
 
-Razer's eGPU models have a simple handle locking mechanism that makes it trivially easy to get at the PCI slot and release or mount a card, like this:
+Razer's eGPU models have a simple handle locking mechanism that makes it trivially easy to get at the PCI slot and release or mount a card. Mounting a card is pretty easy: just remove the I/O plate facade, push the card's pins into the slot, and connect the two power cables into the top of the card. It'll look like this before you slide it back into place:
 
-![](/uploads/IMG_4112.jpg)
+![A Radeon VII card seated inside the PCI slot of a Razer Core V2](/uploads/IMG_4112.jpg)
 
-And, if you opt for the cheaper, quieter, larger Razer Core X, here's an idea of the size difference:
+If you opt for the cheaper, quieter, larger Razer Core X, here's an idea of the size difference:
+
+![a large Razer Core X and a small Razer Core V2 sitting side by side](/uploads/IMG_4114.jpg)
+
+And finally, here's what it all looks like when thrown onto a desk with a monitor and a keyboard:
+
+![monitor, keyboard, mouse, eGPU, and closed MacBook Pro](/uploads/IMG_4122.jpg)
+
+The eGPU ships with a hilariously short 1 foot cable, so you'll want to reach for an active 2 meter cable as soon as possible.
+
+### Setting up macOS
+
+This one's easy: update macOS to the current release version, which (as of this writing) is 10.14.5. If you're on that version or newer, just plug the eGPU enclosure into a power outlet and connect it to the computer, and you should immediately see it recognized in the "About This Mac" view:
+
+![macOS About This System dialog, showing version 10.14.5](/uploads/Screen Shot 2019-06-12 at 9.55.41 PM.png)
+
+And that's it. On macOS, this is all truly plug-and-play. If you have any games that run on macOS, they should be able to immediately take advantage of the eGPU.
+
+If you have certain apps that need an extra push to use that GPU, you can tell macOS to present only that GPU to them via the application's "Get Info" dialog in Finder:
+
+_TODO_ 
+
+And, while it's said that you can "hot" plug an eGPU at any time while running the computer, I think it'd be more fair to say you can merely "warm" unplug it. If you unplug the eGPU without giving macOS a chance to restart any applications currently using it, those apps will crash and macOS will yell at you. So, 
