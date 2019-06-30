@@ -83,8 +83,8 @@ This one's easy: update macOS to the current release version, which (as of this 
 
 And that's it. On macOS, this is all truly plug-and-play. If you have any games that run on macOS, they should be able to immediately take advantage of the eGPU.
 
-If you have certain apps that need an extra push to use that GPU, you can tell macOS to present only that GPU to them via the application's "Get Info" dialog in Finder:
+If you have certain apps that need an extra push to use that GPU, you can tell macOS to present only that GPU to them by checking "Prefer external GPU" in the application's "Get Info" dialog in Finder:
 
-_TODO_ 
+![Dialog for "Prefer External GPU"](/uploads/Screen Shot 2019-06-30 at 9.40.00 AM.png)
 
 And, while it's said that you can "hot" plug an eGPU at any time while running the computer, I think it'd be more fair to say you can merely "warm" unplug it. If you unplug the eGPU without giving macOS a chance to restart any applications currently using it, those apps will crash and macOS will yell at you. So, 
