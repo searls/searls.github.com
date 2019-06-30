@@ -159,17 +159,19 @@ You'll be asked to name the restore point, and you can give it whatever name you
 
 ![Create a restore point dialog, named 1-initial-setup](/uploads/3f.jpg)
 
-Next, because Windows 10's built-in attempt to locate and install GPU drivers will often interfere with the chipmakers' own software, prior to plugging in your eGPU or installing any AMD or Nvidia drivers, you actually want to _uninstall_ all GPU drivers and prevent Windows Update from attempting to install new ones. This can be done with a program called DDU which can be [downloaded here]() (I used [version 18.0.1.5]()). The website looks like every other website for software that runs on Windows:
+### Running DDU to take control of Windows GPU drivers
+
+Next, because Windows 10's built-in methods for locating and installing GPU drivers will often interfere with the chipmakers' own software, prior to plugging in your eGPU or installing any AMD or Nvidia drivers, you actually want to _uninstall_ all GPU drivers and prevent Windows Update from attempting to install new ones. This can be done with a program called DDU which can be [downloaded here]() (I used [version 18.0.1.5]()). The website looks like every other website for software that runs on Windows:
 
 ![the DDU home page](/uploads/8.jpg)
 
-Because the download link disappears every once few seconds on a timed carousel animation, just keep waiting until you time your click to successfully download it.
+Because the download link disappears every few seconds on a timed carousel animation, just wait until you can time your click to successfully download it.
 
 Once installed, run it and it'll complain that you're not in Windows Safe mode:
 
 ![DDU launcher](/uploads/7.jpg)
 
-At the time of this writing and with this mix of hardware and software, it actually didn't appear to be possible to boot Windows 10 into Safe Mode under Boot Camp, so I just launched anyway.
+At the time of this writing and with this mix of hardware and software, it actually didn't appear to be possible to boot Windows 10 into Safe Mode under Boot Camp, so I just launched DDU anyway.
 
 Since I was going to install a Radeon card, I selected AMD from the dropdown box near the top-right of the UI, resulting in the app shading itself like this:
 
@@ -188,6 +190,8 @@ Okay, after checking "prevent downloads", close the options menu and then click 
 When that's done, restart, hit the windows key and type "restore point" again to create a second restore point after you've run DDU but before you've downloaded your GPU's drivers:
 
 ![A second restore point named 2-post-ddu](/uploads/3b.jpg)
+
+### Install your GPU drivers
 
 **Next up, you should finally plug in your eGPU!** Give Windows a minute as the eGPU warms up to detect the Thunderbolt controller. If you open Device Manager you should see a display adapter named "Microsoft Basic Display Adapter":
 
@@ -216,7 +220,7 @@ In my case, when I view the properties of the AMD Radeon VII display adapter, ev
 
 ![](/uploads/a2.jpg)
 
-There is a really good chance, however, that you'll see a yellow exclamation point over the GPU's icon, and instead of "This device is working properly", you'll be greeted by "Error 12" and  a message that the device doesn't have sufficient resources (read: either memory addressing or bandwidth) to be used. If you see this, your GPU won't engage at all, and you'll have to troubleshoot it. There are a bunch of ideas [in this thread](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/), but what will work for you depends on a combination of factors. 
+There is a really good chance, however, that you'll see a yellow exclamation point over the GPU's icon, and instead of "This device is working properly", you'll be greeted by "Error 12" and  a message that the device doesn't have sufficient resources (read: either memory addressing or bandwidth) to be used. If you see this, your GPU won't engage at all, and you'll have to troubleshoot it. There are a bunch of ideas [in this thread](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/), but what will work for you depends on a combination of factors.
 
 Before you get too deep in the weeds trying to solve this, however, be sure to try connecting the eGPU to each of the four Thunderbolt 4 ports of your MacBook Pro, each separated by a system reboot. It may be the case that one of them works reliably (on the 13" models, the left-front port typically has the most available bandwidth for  Thunderbolt 3 PCIe devices).
 
@@ -225,3 +229,23 @@ In any case, if and when Windows reports the device is working properly, that me
 Once you've connected a second monitor, if you want to ensure no Thunderbolt 3 bandwidth is wasted on driving your MacBook's display, hit windows-P repeatedly until you select "second screen only", effectively disabling the notebook display under Windows:
 
 ![The Windows display mode options](/uploads/d.jpg)
+
+### Adjust Windows sleep settings
+
+Several eGPU enclosures as well as specific cards have a really hard time figuring out what to do with their fans when Windows goes to sleep. In my case, every time Windows slept or I closed my MacBook Pro's lid, both the GPU's and the enclosure's fans all began spinning at 100% speed, which—fun fact—was a very loud 59dB measured from about a meter away.
+
+To avoid this, I went through and disabled Windows sleep everywhere I could.
+
+First, hit the Windows key and type "power" to bring up the basic power preferences:
+
+![](/uploads/e3.jpg)
+
+All I changed here was to set "When plugged in, PC goes to sleep after" to "Never", which doesn't form a real sentence, but will solve the primary problem of eGPUs freaking out during Windows sleep. Note that it is safe to allow sleep when on battery power, because since all eGPU enclosures supply power to the system over the Thunderbolt 3 cable, you're never _not_ plugged in when they're connected.
+
+Next, click additional power settings:
+
+Dig through the control panel for this energy settings page:
+
+![Windows 10 energy settings](/uploads/e1.jpg)
+
+You'll see I disabled sleep when pressing the power button or closing the lid, as well as removing all sleep-related options from the start menu.
