@@ -10,9 +10,11 @@ draft: true
 
 After Apple released its (soon-to-be) previous generation Mac Pro, it probably didn't take long for them to realize they had a trash can fire on their hands, especially with [regard to GPU performance](https://marco.org/2019/06/09/apple-is-listening). When Apple announced eGPU support for macOS in 2017's [High Sierra release](https://web.archive.org/web/20170731114535/https://www.apple.com/macos/high-sierra-preview/), it was hard not to see the announcement as anything more than an admission that Apple's top-of-the-line desktops and notebooks shipped with subpar GPUs due to their severe thermal constraints. Of course,  because Apple has never considered AAA gaming to be an important function of its products, the Mac has always lagged behind Windows in GPU availability and support. But by 2017 (and until the new [Mac Pro](https://www.imore.com/mac-pro-2019-everything-you-need-know) tower releases this fall), the situation has been especially grim: even for workstation tasks like video encoding and 3D modeling, the internal GPUs Apple has been selling are so bad that they're driving a nontrivial number of creative professionals—a market Apple actually does care about—off its platform.
 
-How else can you explain the absurd amount of effort it must have taken from Apple (and Intel) so that nerds they don't care about could make the following statement in 2019: instead of putting a beefy graphics card _inside_ your computer, **you are now able to take a best-in-class GPU, seat it inside an external box, plug that box into your computer, and—using a single high-bandwidth cable—push the necessary instructions to render 4K games at 60 frames per second on the card before (over the very same cable!) pushing those frames back to your notebook's built-in monitor without introducing any perceptible latency**. I've seen daily evidence of this for the last month and I gotta say: it's pretty freakin' cool.
+The world may be excited to close the door on the ill-conceived trash can Mac Pro, but if it hadn't been for its glaring design flaws, Apple and Intel probably wouldn't have prioritized the engineering needed to make running an eGPU over Thunderbolt 3 a commercial reality.
 
-The idea that you'd be able to connect a GPU over a 2 meter cable and get desktop-class gaming performance out of the current crop of MacBooks Pro seems far-fetched. Even to me, as I literally play games with one. When reasonable people encounter Apple's marketing about eGPUs—which is only focused on creative professional workflows like [_modeling_ VR experiences as opposed to _experiencing_ them](https://www.youtube.com/watch?v=S48T-cOG0ks)—it would be unreasonable to make the logical leap to say, "ah, yes, surely if I boot that computer into Windows, the eGPU enclosure would have the necessary drivers and the Thunderbolt 3 cable would have the necessary bandwidth to render games in real-time at an acceptable frame rate and input lag."
+So, it's thanks to the trash can Mac Pro that in 2019, we can say: instead of putting a beefy graphics card _inside_ your computer, **you are now able to take a top-of-the-line gaming GPU, seat it inside an external box, plug that box into your computer, and—using a single high-bandwidth cable—push the necessary instructions to render 4K games at 60 frames per second on the card before (over the very same cable!) pushing those frames back to your notebook's built-in monitor without introducing any perceptible latency**. I've seen daily evidence of this for the last month and I gotta say: it's pretty freakin' cool.
+
+The idea that you'd be able to connect a GPU over a 2-meter cable and get desktop-class gaming performance out of the current crop of MacBooks Pro seems far-fetched. Even to me, as I literally play games with one. When reasonable people encounter Apple's marketing about eGPUs—which is only focused on creative professional workflows like [_modeling_ VR experiences as opposed to _experiencing_ them](https://www.youtube.com/watch?v=S48T-cOG0ks)—it would be unreasonable to make the logical leap to say, "ah, yes, surely if I boot that computer into Windows, the eGPU enclosure would have the necessary drivers and the Thunderbolt 3 cable would have the necessary bandwidth to render games in real-time at an acceptable frame rate and input lag."
 
 _And yet_, AAA PC gaming is exactly what a MacBook + eGPU can do. It's just that nobody [other than Razer](https://www.razer.com/gaming-laptops/razer-core-x) is telling the market that.
 
@@ -94,3 +96,61 @@ And, while you can "hot plug" an eGPU into your machine at any time while runnin
 If you fail to do this and yank the cable without first unmounting the eGPU, macOS will yell at you (before proceeding to force-restart most of the apps you were just running):
 
 ![macOS warning not to unplug the eGPU without unmounting it first](/uploads/Screen Shot 2019-06-30 at 9.48.27 AM.png)
+
+And that's pretty much all there is to using an eGPU with macOS. The entire experience is so invisible and seamless that Apple's engineers deserve to be commended.
+
+### Setting up Windows via Boot Camp
+
+This process hasn't changed much in the last 12 years. Start by [downloading Windows 10](https://www.microsoft.com/en-us/software-download/windows10).
+
+As of mid-June 2019, the most recent downloadable version of the Windows 10 installer was the October 2018 release:
+
+![Windows 10 download dialog](/uploads/Screen Shot 2019-06-14 at 7.25.16 PM.png)
+
+Once downloaded, launch Boot Camp Assistant, which will download some support software, ask for the Windows image (which, if the download is complete, it may detect automatically), and prompt you to choose your partition size:
+
+![Boot Camp assistant setup page](/uploads/Screen Shot 2019-06-14 at 7.49.01 PM.png)
+
+Boot Camp Assistant is still finicky and on AFPS volumes will regularly report failure when attempting to partition the disk.
+
+![boot camp partition failure](/uploads/Screen Shot 2019-06-14 at 8.25.33 PM.png)
+
+When this happens, just quit the app, reboot, and try again. It has never not taken me at least two tries. Once it's working, you should be booted into the Windows installer:
+
+![](/uploads/Image-1.jpeg)
+
+The most important step is actually _not_ entering your product key (which can be done later), but ensuring you pick the edition of Windows for which you have (or want) a license. In my case, Windows 10 Pro:
+
+![Windows Installer edition selection page](/uploads/Image 2.jpeg)
+
+The next thing to look out for is that once Windows boots, an Apple-deployed script will run which _should_ launch the Boot Camp installer, which contains all of the drivers for your computer's various components and which you'll definitely want install immediately before rebooting:
+
+![the Windows Boot Camp Support installer](/uploads/Image 3.jpeg)
+
+Because each Windows release is dramatically improving its own eGPU support, before doing anything else you'll want to upgrade to the latest available stable release. For reference, I started at Windows 10 version 1809. 
+
+The most recent release at the time was 1903, but Windows 10 is especially precious about how it rolls out system updates over its install base, and actually does not expose a mechanism in the operating system to tell it "shut up, just give me the latest release". You can force-trigger a release by visiting a particular [Microsoft web page](https://microsoft.com/en-us/software-download/windows10?) and clicking "Update now", however:
+
+![update windows 10 page](/uploads/1.jpg)
+
+Weird.
+
+Anyway, that'll take entirely too long to download, so go make a sandwich, I guess. I was too afraid of continuing with any configuration when those options were likely to have been affected by the latest release. So just wait for this to finish:
+
+![windows 10 update app](/uploads/2.jpg)
+
+Once Windows has updated itself and restarted, we want to create a System Restore Point, so that we can easily unwind any driver & configuration changes we make if we run into trouble. You can do this by hitting the windows key and searching "restore point" to open this dialog:
+
+![Windows 10 System properties preferences](/uploads/3d.jpg)
+
+Click "Configure" restore settings, and in the subsequent dialog box choose "Turn on system protection" (how is this not on by default?!):
+
+![windows 10 system protection settings](/uploads/3.jpg)
+
+Click OK, and in the previous pane, you should now be able to click "Create" a restore point:
+
+![Windows 10 system properties after system protection has been enabled](/uploads/3e.jpg)
+
+You'll be asked to name the restore point, and you can give it whatever name you want:
+
+![Create a restore point dialog, named 1-initial-setup](/uploads/3f.jpg)
