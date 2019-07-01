@@ -18,7 +18,7 @@ _And yet_, AAA PC gaming is actually within reach of a recent MacBook Pro paired
 
 ## How to get started
 
-I pieced this all together from dozens of forum posts, guides, and build data from the small-but-dedicated community at [eGPU.io](https://egpu.io). Because the very-newest Macs, eGPU enclosures, and operating system releases have made things much easier as of late, that much of the content in the most popular guides is no longer relevant. Therefore, I will try to document here a stripped-down walkthrough that starts fresh with the latest operating systems and hardware components.
+I pieced this all together from dozens of forum posts, guides, and build data from the small-but-dedicated community at [eGPU.io](https://egpu.io). Because the very-newest Macs, eGPU enclosures, and operating system releases have made things much easier as of late, much of the content in the most popular guides is no longer relevant. Therefore, I will try to document here a stripped-down walkthrough that starts fresh with the latest operating systems and hardware components.
 
 **Hardware:**
 
@@ -48,7 +48,7 @@ might provide some guidance beyond what I offer here.
 
 **Why an external monitor?** While both macOS and Windows can "loopback" frames rendered by the eGPU over the cable and onto the computer's built-in monitor, operating system support for this is very recent and it introduces a nonzero bandwidth cost which can result in lower framerates as well as frames being dropped. Adding to that, the relatively high DPI of Apple's displays makes running games at native resolutions more demanding than monitors designed for PC gaming.
 
-**What about my pre-2019 MacBook Pro?** If your Mac has Thunderbolt 3 ports (e.g. [late-2016](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.0-13-late-2016-retina-display-no-touch-bar-specs.html) or later), you'll be able to figure out a way to make it work, but with an increased amount of Windows futzing for each year you go back. I initially set all this up with a [mid-2017](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2017-retina-display-no-touch-bar-specs.html) MacBook Pro, but wound up spending six or seven hours applying various salves and incantations to try to work around "[Windows Error 12](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/)", which is the nonsense Device Manager will spew when Windows can't figure out how to get sufficient bandwidth and memory addressed to the eGPU.
+**What about my pre-2019 MacBook Pro?** If your Mac has Thunderbolt 3 ports ([late-2016](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.0-13-late-2016-retina-display-no-touch-bar-specs.html) or later), you'll be able to figure out a way to make it work, but with an increased amount of Windows futzing for each year you go back. I initially set all this up with a [mid-2017](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.3-13-mid-2017-retina-display-no-touch-bar-specs.html) MacBook Pro, but wound up spending six or seven hours applying various salves and incantations to try to work around "[Windows Error 12](https://egpu.io/forums/pc-setup/2016-macbook-pro-solving-egpu-error-12-in-windows-10/)", which is the nonsense Device Manager will spew when Windows can't figure out how to get sufficient bandwidth and memory addressed to the eGPU.
 
 Ok, with that out of the way. Let's see what it looks like to set this all up.
 
