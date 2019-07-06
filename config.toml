@@ -1,9 +1,15 @@
 baseURL = "https://justin.searls.co"
 languageCode = "en-us"
-title = "searls"
+title = "justin.searls.co"
 theme = "ultralight"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
+rssLimit = 100
+copyright = "Copyright Justin Searls. All rights reserved.
+
+[author]
+  name = "Justin Searls"
+  email = "justin@searls.co"
 
 [blackfriday]
   smartypants = false
