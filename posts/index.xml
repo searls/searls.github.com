@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on searls</title>
+    <title>Posts on justin.searls.co</title>
     <link>https://justin.searls.co/posts/</link>
-    <description>Recent content in Posts on searls</description>
+    <description>Recent content in Posts on justin.searls.co</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>justin@searls.co (Justin Searls)</managingEditor>
+    <webMaster>justin@searls.co (Justin Searls)</webMaster>
+    <copyright>Copyright Justin Searls. All rights reserved.</copyright>
     <lastBuildDate>Sun, 30 Jun 2019 00:54:53 +0000</lastBuildDate>
     
 	<atom:link href="https://justin.searls.co/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +18,7 @@
       <title>Cramming a gaming GPU into your MacBook Pro</title>
       <link>https://justin.searls.co/posts/gaming-with-a-mac-plus-egpu/</link>
       <pubDate>Sun, 30 Jun 2019 00:54:53 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/gaming-with-a-mac-plus-egpu/</guid>
       <description>…without actually doing that How we got here After Apple released its (soon-to-be) previous generation Mac Pro, it probably didn&#39;t take long for them to realize they had a trash can fire on their hands, especially with regards to GPU performance. When Apple announced eGPU support for macOS in 2017&#39;s High Sierra release, it was hard not to see the announcement as anything more than an admission that Apple&#39;s top-of-the-line desktops and notebooks shipped with subpar GPUs due to their severe thermal constraints.</description>
     </item>
@@ -24,7 +27,7 @@
       <title>You make less money than you used to. Blame your iPhone.</title>
       <link>https://justin.searls.co/posts/searls/you-make-less-money-than-you-used-to-blame-your-iphone-61ae5831c93f/</link>
       <pubDate>Wed, 30 May 2018 04:12:37 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/you-make-less-money-than-you-used-to-blame-your-iphone-61ae5831c93f/</guid>
       <description>For years, economists have been puzzling over why, despite unprecedented technological innovation since the dawn of the Internet, productivity is flat. Really, nobody seems to know why! Look no further than this week’s news to find a consensus opinion that the just-around-the-corner cure for lagging productivity numbers is—wait for it—more technological innovation.
 Productivity is a curiously-named economic measure that essentially boils down to “amount of money you generate for your employer over time.</description>
@@ -34,7 +37,7 @@ Productivity is a curiously-named economic measure that essentially boils down t
       <title>10 Rules</title>
       <link>https://justin.searls.co/posts/searls/10-rules-54243f9b9aed/</link>
       <pubDate>Thu, 21 Dec 2017 20:57:17 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/10-rules-54243f9b9aed/</guid>
       <description>Here it is, the post that enumerates all of the ways in which remote work has turned me into a total weirdo.
 For almost a decade now I’ve been working from home, enjoying the unusual freedoms—and anxieties—that it brings. If a single theme has emerged, it’s this: by default, I’m an undisciplined mess. When given the choice between short-term distractions and long-term goals, I’ll take the passing hit of instant gratification every time.</description>
@@ -44,7 +47,7 @@ For almost a decade now I’ve been working from home, enjoying the unusual free
       <title>Giving the iPad a full-time job</title>
       <link>https://justin.searls.co/posts/giving-the-ipad-a-full-time-job/</link>
       <pubDate>Sun, 25 Jun 2017 20:49:27 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/giving-the-ipad-a-full-time-job/</guid>
       <description>[A translation of this post is available in Chinese]
 Programmers often describe their ideal tools with adjectives like “powerful”, “feature-rich”, and “highly-configurable”. Few users are seen as wanting more from their computers than programmers.
@@ -55,7 +58,7 @@ This popular notion agrees with our general intuition that more capability intri
       <title>My counter-cultural iOS 11 wish list</title>
       <link>https://justin.searls.co/posts/searls/my-counter-cultural-ios-11-wish-list-89531c8053db/</link>
       <pubDate>Mon, 02 Jan 2017 18:54:15 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/my-counter-cultural-ios-11-wish-list-89531c8053db/</guid>
       <description>In seven days, it will have been ten years since the keynote to end all keynotes.
 A decade hence, I’m uncomfortable with declarations that the iPhone and iOS are “mature,” however. Unlike other mature platforms that became commoditized and absorbed into daily life, smartphones have not receded into the periphery of our attention. If anything, the entire planet is more glued to their phones today than ever before. “Mature” is code for “set in stone”, and it’s my view that any device that’s able to so thoroughly capture the attention of the human race as the iPhone-era smartphone demands continuous reinvestment.</description>
@@ -65,7 +68,7 @@ A decade hence, I’m uncomfortable with declarations that the iPhone and iOS ar
       <title>Warm Takes on Microsoft’s Surface Pro 4</title>
       <link>https://justin.searls.co/posts/searls/warm-takes-on-microsofts-surface-pro-4-580f77634d2c/</link>
       <pubDate>Wed, 28 Dec 2016 00:29:32 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/warm-takes-on-microsofts-surface-pro-4-580f77634d2c/</guid>
       <description>First, some background I embarked on a spiritual journey this week to answer these questions: do all the developers I see switching (or threatening to switch) to Windows see something that I don’t? Has Microsoft actually turned the Windows user experience around? Is the combination of Microsoft’s hardware &amp;amp; software superior to Apple’s on the Mac?
 At the heart of these questions: hope. Hope that people have placed in Microsoft’s embrace of open source, its in-house hardware design, and its broadened cross-platform support.</description>
@@ -75,7 +78,7 @@ At the heart of these questions: hope. Hope that people have placed in Microsoft
       <title>Registering a Microsoft Surface Pro 4</title>
       <link>https://justin.searls.co/posts/searls/registering-a-microsoft-surface-pro-4-17c05d6d2e7a/</link>
       <pubDate>Sun, 25 Dec 2016 18:59:26 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/registering-a-microsoft-surface-pro-4-17c05d6d2e7a/</guid>
       <description>I’ll have a lot more to say about my experiments in trying out Windows over the coming days, but as a special Christmas bonus edition, I thought I’d share the steps that were apparently required for me to register my Surface Pro 4 with Microsoft.
 As I got in bed last night, I activated tablet mode for the first time and while perusing the don’t-call-it-Metro tile page, I saw an app called “Surface”.</description>
@@ -85,7 +88,7 @@ As I got in bed last night, I activated tablet mode for the first time and while
       <title>Giving Windows a Chance</title>
       <link>https://justin.searls.co/posts/searls/giving-windows-a-chance-39f4d7f1b93c/</link>
       <pubDate>Sat, 24 Dec 2016 06:48:24 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/giving-windows-a-chance-39f4d7f1b93c/</guid>
       <description>I bought a Surface Pro 4 tonight. Over the next week I’m going to share my notes on getting used to it. And over the next month I’m going to attempt to do all of my open source work from it. but tonight, I want to first comment on the state of the Mac and PC so that I can get my own initial perspective and biases on the table.</description>
     </item>
@@ -94,7 +97,7 @@ As I got in bed last night, I activated tablet mode for the first time and while
       <title>How-to: Thanksgiving for Millennials</title>
       <link>https://justin.searls.co/posts/searls/how-to-thanksgiving-for-millennials-fd28b05ee0c1/</link>
       <pubDate>Thu, 24 Nov 2016 19:10:47 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/how-to-thanksgiving-for-millennials-fd28b05ee0c1/</guid>
       <description>My wife &amp;amp; I have been returning to my parents house for Thanksgiving every year since we graduated college. Customarily, people stop schlepping home to exploit the free labor of their parents’ holiday cheer around the time they have kids—but for a growing number of millennials who aren’t interested in bringing children into the world, this presents a dilemma: do I expect my mom to cook me turkeys until she is physically unable?</description>
     </item>
@@ -103,7 +106,7 @@ As I got in bed last night, I activated tablet mode for the first time and while
       <title>Nero may have fiddled while Rome burned, but at least he didn’t gawk</title>
       <link>https://justin.searls.co/posts/searls/nero-may-have-fiddled-while-rome-burned-but-at-least-he-didnt-gawk-ec3988d20269/</link>
       <pubDate>Thu, 10 Nov 2016 13:58:21 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/nero-may-have-fiddled-while-rome-burned-but-at-least-he-didnt-gawk-ec3988d20269/</guid>
       <description>It’s time we had a talk about the news.
 From the first time I heard a modem chime, I’ve been on a mission to discover, curate, and editorialize as much news as possible. Over the years, I’ve written for a variety of outlets — called “web sites” at first, then “blogs” for a while, and now subsumed by the lifeless social media platforms to which we all contribute. From the mid-nineties until I graduated college, I slowly optimized this information funnel — broadening the aperture of content I could absorb each day, while tightening my own editorial voice.</description>
@@ -113,7 +116,7 @@ From the first time I heard a modem chime, I’ve been on a mission to discover,
       <title>Phone-free Field Trips</title>
       <link>https://justin.searls.co/posts/searls/phone-free-field-trips-cdbc4debdfc6/</link>
       <pubDate>Sun, 11 Sep 2016 06:59:52 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/phone-free-field-trips-cdbc4debdfc6/</guid>
       <description>The degree to which we’re constantly connected via our phones is well-documented, thoroughly-researched, and intuitively understood by over a billion people. But we tend not to do much about it, because the benefits of being connected seem far more concrete than the relatively intangible benefits of being disconnected.
 This week, I was forced to reckon with this in a stark enough way to convince me to take action.
@@ -124,7 +127,7 @@ Lost in Translation In the year 3 BiE (Before iPhone Era), I lived a nearly-enti
       <title>Why I don’t eat before dark</title>
       <link>https://justin.searls.co/posts/searls/why-i-don-t-eat-before-dark-29536618a1ac/</link>
       <pubDate>Sun, 28 Feb 2016 20:24:32 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/why-i-don-t-eat-before-dark-29536618a1ac/</guid>
       <description>I often tell people the only reason I blog or speak is to guard against having the same conversation over and over again. So, here I go again:
  The first thing I eat every day is dinner, meaning I don’t eat breakfast, lunch, or daytime snacks I run 3 miles every day, without exception. In spite of my travels taking me all over the world, I’m pretty sure I haven’t missed a run in two years  Doing these two things has improved my health considerably, saves a lot of time and money, and has improved my ability to focus on my work.</description>
@@ -134,7 +137,7 @@ Lost in Translation In the year 3 BiE (Before iPhone Era), I lived a nearly-enti
       <title>Japanese Travel Survival Guide</title>
       <link>https://justin.searls.co/posts/searls/japanese-travel-survival-guide-b88c27a418b7/</link>
       <pubDate>Sun, 16 Aug 2015 14:51:11 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/japanese-travel-survival-guide-b88c27a418b7/</guid>
       <description>As an American that’s regularly traveled to Japan over the past ten years — in trips ranging from 2 weeks to 7 months — I’ve accumulated a few observations and tips that have made getting around significantly easier.
 Travel Light I travel with a carry-onable back pack. Anything larger would be obnoxious when negotiating trains/bus stations. Specifically, I travel with an Osprey Porter 46. Even with that, I usually plan my day around dropping it off as quickly as possible (even if it’s prior to check-in, hotels will always hold it for you).</description>
@@ -144,7 +147,7 @@ Travel Light I travel with a carry-onable back pack. Anything larger would be ob
       <title>Installing a Content Blocker on iOS 9 Public Beta</title>
       <link>https://justin.searls.co/posts/searls/installing-a-content-blocker-on-ios-9-public-beta-a25b2b83848f/</link>
       <pubDate>Sat, 08 Aug 2015 21:36:17 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/installing-a-content-blocker-on-ios-9-public-beta-a25b2b83848f/</guid>
       <description>After spending 3 weeks abroad, literally afraid of opening anything resembling an article in Safari, I was eager to come home, install a beta operating system, and take advantage of iOS 9&#39;s now-famous content blocking API. There are a few projects on GitHub that do this, but the most evolved seems to be Block Party.
 Let’s try out installing a content blocker on an iPhone for ourselves. The instructions below are mostly complete and a bit inane, so it’s up to you whether you’re better off just waiting the 4–6 weeks until iOS 9 is released to the public.</description>
@@ -154,7 +157,7 @@ Let’s try out installing a content blocker on an iPhone for ourselves. The ins
       <title>How to Internet in Japan</title>
       <link>https://justin.searls.co/posts/searls/how-to-internet-in-japan-ba48fe421fa0/</link>
       <pubDate>Mon, 20 Jul 2015 07:21:39 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/how-to-internet-in-japan-ba48fe421fa0/</guid>
       <description>If you’re reading this, then perhaps you enjoy having fast, easy access to the Internet. If so, and you’re heading to Japan anytime soon, then perhaps this guide will be of use to you.
 When traveling to Japan, access to their mostly-excellent wireless network is not always easily attained. In the past, I’ve used T-Mobile’s free unlimited international roaming as well as mobile hotspot rental services, but both have significant drawbacks — extreme throttling and terrible battery life, respectively.</description>
@@ -164,7 +167,7 @@ When traveling to Japan, access to their mostly-excellent wireless network is no
       <title>Constants and Variables</title>
       <link>https://justin.searls.co/posts/searls/constants-and-variables-d0a5b4aa98b7/</link>
       <pubDate>Sun, 14 Jun 2015 00:13:51 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/constants-and-variables-d0a5b4aa98b7/</guid>
       <description>They’re a million million worlds. All different and all similar. Constants and variables. -Elizabeth, Bioshock Infinite
  A lesson I learned early in my career as a programmer was to be wary of accidental creativity. If you’re the type of person who really cares about getting the details right, it’s critical to first decide which details truly matter. Not doing so is a recipe for endless frustration, as one will inevitably be distracted and defeated each day — sweating more arbitrary decisions than meaningful ones.</description>
@@ -174,7 +177,7 @@ When traveling to Japan, access to their mostly-excellent wireless network is no
       <title>How-to make your iPhone Dimmer than Dim</title>
       <link>https://justin.searls.co/posts/searls/how-to-make-your-iphone-dimmer-than-dim-d20fd3bbbb66/</link>
       <pubDate>Sat, 31 Jan 2015 15:30:45 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/how-to-make-your-iphone-dimmer-than-dim-d20fd3bbbb66/</guid>
       <description>When I’m trying to read my iPhone (or iPad) in bed, I’m liable to wake up my spouse with the device’s backlight, even when the screen is set to its lowest brightness setting. Moreover, it’s hard for me to fall asleep immediately after staring at a relatively bright screen.
 Up until last night I thought I was just out of luck unless I installed flux, which would never be worth the security and stability issues raised by jailbreaking a device.</description>
@@ -184,7 +187,7 @@ Up until last night I thought I was just out of luck unless I installed flux, wh
       <title>Studying Japanese with a Nintendo 3DS &amp; Google Translate</title>
       <link>https://justin.searls.co/posts/searls/studying-japanese-with-a-nintendo-3ds-google-translate-b5c6d3206562/</link>
       <pubDate>Sun, 18 Jan 2015 18:51:15 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/studying-japanese-with-a-nintendo-3ds-google-translate-b5c6d3206562/</guid>
       <description>I was interested in using videogames to practice my Japanese reading and listening comprehension, so after some initial thinking, I decided to buy an imported New Nintendo 3DS. Here are some notes on how I went about that and what I’m doing to use games primarily as an educational tool.
 Buying the device There are lots of import sites out there that will get you a good deal on Japanese game products, but I wanted to (a) get fast, reliable shipping, (b) have some kind of return policy, and (c) not risk customs headaches.</description>
@@ -194,7 +197,7 @@ Buying the device There are lots of import sites out there that will get you a 
       <title>Will your iPad’s Apple SIM allow you to buy ala carte prepaid data from AT&amp;T?</title>
       <link>https://justin.searls.co/posts/searls/will-your-ipads-apple-sim-allow-you-to-buy-ala-carte-prepaid-data-from-at-t-da673e1d3c16/</link>
       <pubDate>Mon, 03 Nov 2014 16:14:54 +0000</pubDate>
-      
+      <author>justin@searls.co (Justin Searls)</author>
       <guid>https://justin.searls.co/posts/searls/will-your-ipads-apple-sim-allow-you-to-buy-ala-carte-prepaid-data-from-at-t-da673e1d3c16/</guid>
       <description>When Apple announced iPad Air 2, I was most excited by the prospect of Apple SIM. That excitement waned when we learned AT&amp;amp;T would lock Apple SIMs to its network upon their activation (so much for that layer of indirection enabling competition). Still, I held out hope that maybe an Apple SIM could be used to purchase pre-paid data from an iPad and then be plopped into and used by an unlocked iPhone 6.</description>
     </item>
