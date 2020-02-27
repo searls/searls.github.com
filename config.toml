@@ -5,7 +5,7 @@ theme = "ultralight"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 rssLimit = 100
-copyright = "Copyright Justin Searls. All rights reserved.
+copyright = "Copyright Justin Searls. All rights reserved."
 
 [author]
   name = "Justin Searls"
